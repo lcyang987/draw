@@ -1,0 +1,119 @@
+.svgContainer {
+  position: relative;
+  display: inline-block;
+  border: 10px solid black;
+  top: 56px;
+  user-select: none;
+}
+.svgContainer img {
+  display: block;
+  width: 100%;
+}
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+}
+.svgProduct path {
+  stroke-width: 1;
+  opacity: 0.1;
+  stroke: white;
+  stroke-width: 1;
+}
+.svgProduct.show path {
+  opacity: 1;
+  fill: #00000033;
+}
+.svgProduct.show path.select {
+  stroke: white;
+  stroke-width: 4;
+}
+.svgDraw.hide {
+  display: none;
+}
+.svgDraw g path,
+.svgDraw g circle,
+.svgDraw g line {
+  display: none;
+}
+.svgDraw.close g path,
+.svgDraw.close g circle,
+.svgDraw.close g line {
+  display: inline;
+}
+.svgDraw g:last-child path,
+.svgDraw g:last-child circle,
+.svgDraw g:last-child line,
+.svgDraw g:nth-last-child(2) circle.b-circle,
+.svgDraw g:nth-last-child(2) line.b-line {
+  display: inline;
+}
+.svgDraw path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+}
+.svgDraw line {
+  stroke: #ddd;
+  stroke-width: 1;
+}
+.svgDraw circle {
+  r: 4;
+  stroke: white;
+  stroke-width: 14;
+  stroke-opacity: 0;
+  fill: blueviolet;
+  cursor: move;
+}
+.svgDraw rect {
+  width: 8px;
+  height: 8px;
+  fill: steelblue;
+  stroke: white;
+  stroke-width: 14;
+  stroke-opacity: 0;
+  cursor: move;
+}
+.svgDraw circle:hover,
+.svgDraw rect:hover {
+  stroke-opacity: 1;
+  stroke-width: 2;
+}
+.svgDraw circle:hover {
+  r: 12;
+}
+.svgDraw rect:hover {
+  width: 20px;
+  height: 20px;
+  transform: translate(-6px, -6px);
+}
+.svgDraw .temp-path{
+  stroke: steelblue;
+  stroke-width: 1;
+}
+.operations {
+  position: absolute;
+  top: -56px;
+}
+.toggle,
+.undoBtn,
+.removeBtn {
+  float: left;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.removeBtn,
+.undoBtn {
+  display: none;
+}
+.removeBtn.show,
+.undoBtn.show {
+  display: initial;
+}
