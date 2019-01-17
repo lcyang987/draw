@@ -343,7 +343,6 @@ PathDraw.prototype.rectMove = function (ev, obj) {
         var lastD = pathData.slice(2).join(' ') ? ' ' + pathData.slice(2).join(' ') : '';
         d = ' C'+ obj.parentNode.getAttribute('x') + ',' + obj.parentNode.getAttribute('y') + ',' + pathData[1].split(',').slice(2).join(',') + lastD;
       }
-      console.log(pathData, pathData.length)
       if (closePath) { // 如果有终点
         var lastD = obj.parentNode.getAttribute('imagex') + ',' + obj.parentNode.getAttribute('imagey') + ',' + X + ',' + Y;
         closePath.setAttribute('d', closePath.getAttribute('d').split(' ')[0] + ' ' + closePath.getAttribute('d').split(' ')[1].split(',').slice(0, 2).join(',') + ',' + lastD);
